@@ -1,10 +1,11 @@
-import styled from 'styled-components'
-import db from '../db.json'
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
-import QuizLogo from '../src/components/QuizLogo'
+import styled from 'styled-components';
+import React from 'react';
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizLogo from '../src/components/QuizLogo';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ export const QuizContainer = styled.div`
     margin: auto;
     padding: 15px;
   }
-`
+`;
 
 export default function Home() {
   return (
@@ -40,5 +41,5 @@ export default function Home() {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/Mahavatar5D/valuiquiz" />
     </QuizBackground>
-  )
+  );
 }
