@@ -34,8 +34,8 @@ const Meta = () => {
       <Head>
         <meta property="og:image" content={db.bg} />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="100" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
         <meta property="og:image:alt" content="Belíssimo Quiz" />
       </Head>
     </>
