@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -9,17 +8,9 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import QuizContainer from '../src/components/QuizContainer';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 export default function Home() {
   const router = useRouter();
@@ -34,7 +25,7 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>The legend of zelda</h1>
+            <h1>#JavasCriptQuiz</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={(infosDoEvento) => {
@@ -42,19 +33,21 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input
+              <Input
+                name="nomeDoUsuario"
                 placeholder="Diz ai seu nome"
                 onChange={(infosDoEvento) => {
                   setName(infosDoEvento.target.value);
                 }}
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 Vamos jogar
                 {' '}
                 {name}
                 {' '}
                 ?
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
